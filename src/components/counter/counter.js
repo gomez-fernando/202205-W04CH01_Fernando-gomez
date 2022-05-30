@@ -1,4 +1,8 @@
+import {PERSONS} from '../../models/person';
+
 export function Counter() {
+   
+
     return (
         <section className="controls">
             <p className="info">0 gentlemen pointing at you</p>
