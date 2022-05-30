@@ -1,13 +1,17 @@
-import { PERSONS } from "../../models/person";
+import { StoreClass } from "../../services/store.class";
 
 export function Buttonv({id}) {
+    const store = new StoreClass();
+    const persons = store.getPersons();
     function handlerClick(ev, id){
-        PERSONS.forEach(item => {
+        persons.forEach(item => {
             if(item.id === id){
+                console.log('si' + id);
                 item.selected = true;
+                store.setPersons(persons);
             }
         })
-        console.log(PERSONS);
+        // console.log(store.getPersons());
 
     }
 

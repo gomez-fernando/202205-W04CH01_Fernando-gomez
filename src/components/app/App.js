@@ -2,8 +2,18 @@ import logo from './logo.svg';
 import './App.css';
 import { Counter } from '../counter/counter';
 import { List } from '../list/list';
+import {PERSONS} from '../../models/person';
+import {StoreClass} from '../../services/store.class'
 
 function App() {
+
+    // StoreClass.setPersons(PERSONS);
+    if(!localStorage.getItem('PERSONS')){
+        let store = new StoreClass();
+        store.setPersons(PERSONS);
+    }
+    
+
     return (
         <div className="App">
             <div className="container">
