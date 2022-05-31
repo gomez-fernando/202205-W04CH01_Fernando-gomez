@@ -2,6 +2,9 @@ import { Buttonv } from '../buttonv/buttonv';
 import { Buttonx } from '../buttonx/buttonx';
 
 export function Card({person}) {
+    function handler(){
+        console.log();
+    }
     return (
         <li className="gentleman">
             <div className="gentleman__avatar-container">
@@ -33,7 +36,7 @@ export function Card({person}) {
             </div>
             <Buttonx></Buttonx>
 
-            <Buttonv id={person.id}></Buttonv>
+            <Buttonv id={person.id} funtion={handler}></Buttonv>
         </li>
     );
 }
